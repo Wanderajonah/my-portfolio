@@ -11,3 +11,4 @@ Supported formats: `.jpg`, `.jpeg`, `.png`, `.webp`
 
 If no image is found, the component will fallback to displaying your initials "WJ".
 
+
